@@ -58,7 +58,7 @@ function checkAnswer(){
 }
 
 function neuesFenster(){
-    window.open("docs/test.html","popup","width=320, height=320"); 
+    window.open("docs/test.html","popup","width=480, height=480"); 
     $("#dort").prop("disabled", true);
   
 }
