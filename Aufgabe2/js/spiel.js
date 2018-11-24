@@ -5,8 +5,8 @@
 var pos = 0, test, test_status, question, choice, choices, chA, chB, correct = 0;
 var questions = [
     [ "Was ist der größere Planet, Saturn oder Mars", "Mars", "Saturn", "B" ],
-	[ "Ist die Erde eine Scheibe", "Ja", "Nein", "B" ],
-	[ "Ist die Sonne ein Stern", "Ja", "Nein", "A" ],
+	[ "Ist die Erde eine Scheibe", "Nein", "Ja", "A" ],
+	[ "Ist die Sonne ein Stern", "Nein", "Ja", "B" ],
 	
 ];
 function _(x){
@@ -20,7 +20,7 @@ function renderQuestion(){
 	if(pos >= questions.length){
         if(correct==3){
             test.innerHTML = "<h2>Sie haben gewonnen</h2>";
-            ("test_status").innerHTML = "Gewinnspiel beendet";
+            ("test_status").innerHTML = "Gewinnspiel beendet"; 
         }
         else{
 		test.innerHTML = "<h2>Sie haben "+correct+" von "+questions.length+" Fragen korrekt</h2>";
@@ -53,6 +53,7 @@ function checkAnswer(){
         
     }
 	pos++;
+    
 	renderQuestion();
 
 }
